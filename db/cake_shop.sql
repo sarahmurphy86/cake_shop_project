@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS bakers;
+
+CREATE TABLE bakers (
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255) not NULL
+);
