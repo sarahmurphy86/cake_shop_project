@@ -19,10 +19,40 @@ class Cake
 
 # CREATE METHOD - Individual
   def save()
-    sql = "INSERT INTO cakes (name, description, quantity, buying_cost, retail_price, baker_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
+    sql = "INSERT INTO cakes
+    (name, description, quantity, buying_cost, retail_price, baker_id)
+    VALUES ($1, $2, $3, $4, $5, $6)
+    RETURNING id"
     values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
+  end
+
+# READ METHOD - Class
+  def self.read_all()
+    sql = "SELECT * FROM cakes"
+    result = SqlRunner.run(sql)
+    build_results(result)
+  end
+
+# FIND METHOD - Class
+  def self.find(id)
+    sql = "SELECT * FROM cakes WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values)[0]
+    cake = Cake.new(result)
+    return cake
+  end
+
+# UPDATE METHOD - Individual
+  def update()
+    sql = "UPDATE cakes SET
+    (name, description, quantity, buying_cost, retail_price, baker_id)
+    =
+    ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @id]
+    SqlRunner.run(sql, values)
   end
 
 # DELETE METHOD - Class
@@ -30,5 +60,14 @@ class Cake
     sql = "DELETE FROM cakes"
     SqlRunner.run(sql)
   end
+
+# MAP METHOD - To use in READ and UPDATE Method
+  def self.build_results(results)
+    result = results.map{|cake| Cake.new(cake)}
+    return result
+  end
+
+# Get baker method - to use to display in view
+
 
 end
