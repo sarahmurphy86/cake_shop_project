@@ -9,6 +9,7 @@ class Baker
     @name = options["name"]
   end
 
+# CREATE METHOD - Individual
   def save()
       sql = "INSERT INTO bakers (name) VALUES ($1) RETURNING id"
       values = [@name]
@@ -16,6 +17,7 @@ class Baker
       @id = result[0]["id"].to_i
   end
 
+# DELETE METHOD - Class
   def self.delete_all()
     sql = "DELETE FROM bakers"
     SqlRunner.run(sql)
