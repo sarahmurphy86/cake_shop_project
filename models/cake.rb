@@ -68,6 +68,9 @@ class Cake
   end
 
 # Get baker method - to use to display in view
-
+  def get_baker()
+    baker = Baker.find(@baker_id)
+    return baker
+  end
 
 end
