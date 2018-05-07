@@ -26,6 +26,11 @@ class Baker
   end
 
 # UPDATE METHOD - Individual
+  def update()
+   sql = "UPDATE bakers SET name = $1 WHERE id = $2"
+   values = [@name, @id]
+   SqlRunner.run(sql, values)
+  end
 
 # DELETE METHOD - Class
   def self.delete_all()
@@ -41,12 +46,4 @@ class Baker
     return result
   end
 
-end
-
-
-
-#Helper method for mapping
-def self.map_items(customer_data)
-  result = customer_data.map { |customer| Customer.new( customer ) }
-  return result
 end
