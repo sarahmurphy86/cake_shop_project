@@ -1,0 +1,24 @@
+<h1>Stock Inventory</h1>
+
+<table>
+	<tr>
+		<th scope="col">Name</th>
+		<th scope="col">Description</th>
+		<th scope="col">Baker</th>
+		<th scope="col">Buying Cost</th>
+		<th scope="col">Retail Price</th>
+		<th scope="col">Quantity</th>
+    <th scope="col">Stock Level</th>
+  </tr>
+  <% for cake in @cakes %>
+  <tr>
+		<td><%=cake.name() %></td>
+		<td><%=cake.description() %></td>
+		<td><%=cake.get_baker.name() %></td>
+		<td><%=cake.buying_cost() %></td>
+		<td><%=cake.retail_price() %></td>
+		<td><%=cake.quantity %></td>
+		<td></td>
+	</tr>
+  <% end %>
+</table>

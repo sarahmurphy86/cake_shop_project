@@ -1,0 +1,7 @@
+<h1> Cake List</h1>
+
+<% @cakes.each do |cake| %>
+  <p>Name: <%= cake.name() %></p>
+  <p>Description: <%=cake.description() %></p>
+  <hr />
+<% end %>
