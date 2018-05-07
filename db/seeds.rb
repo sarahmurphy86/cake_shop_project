@@ -1,6 +1,7 @@
 require_relative "../models/cake.rb"
 require_relative "../models/baker.rb"
 
+Cake.delete_all()
 Baker.delete_all()
 
 baker1 = Baker.new ({

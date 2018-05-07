@@ -22,4 +22,10 @@ class Cake
     @id = result[0]["id"].to_i
   end
 
+# DELETE METHOD - Class
+  def self.delete_all()
+    sql = "DELETE FROM cakes"
+    SqlRunner.run(sql)
+  end
+
 end
