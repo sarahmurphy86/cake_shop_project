@@ -19,3 +19,8 @@ post '/cakes/new' do
   cake.save()
   erb(:"cakes/success")
 end
+
+get '/cakes/:id' do
+  @cakes = Cake.find(params['id'])
+  erb(:"cakes/show")
+end
