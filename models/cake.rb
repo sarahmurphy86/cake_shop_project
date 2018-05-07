@@ -1,8 +1,11 @@
 require_relative "../db/sql_runner"
+require_relative "baker.rb"
+require('pry-byebug')
 
 class Cake
 
-  attr_reader :id, :name, :description, :quantity, :buying_cost, :retail_price, :baker_id
+  attr_reader :id
+  attr_accessor :name, :description, :quantity, :buying_cost, :retail_price, :baker_id
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
