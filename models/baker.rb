@@ -25,6 +25,15 @@ class Baker
     build_results(result)
   end
 
+# FIND METHOD - Class
+  def self.find(id)
+    sql = "SELECT * FROM bakers WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values)[0]
+    baker = Baker.new(result)
+    return baker
+  end
+
 # UPDATE METHOD - Individual
   def update()
    sql = "UPDATE bakers SET name = $1 WHERE id = $2"
@@ -37,8 +46,6 @@ class Baker
     sql = "DELETE FROM bakers"
     SqlRunner.run(sql)
   end
-
-# FIND METHOD - Individual
 
 # MAP METHOD - To use in READ and UPDATE Method
   def self.build_results(results)
