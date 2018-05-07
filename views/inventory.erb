@@ -12,7 +12,7 @@
   </tr>
   <% for cake in @cakes %>
   <tr>
-		<td><%=cake.name() %></td>
+		<td><a href="/cakes/<%= cake.id%>"> <%=cake.name() %></a></td>
 		<td><%=cake.description() %></td>
 		<td><%=cake.get_baker.name() %></td>
 		<td><%=cake.buying_cost() %></td>
