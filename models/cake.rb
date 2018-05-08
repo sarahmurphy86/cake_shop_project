@@ -107,4 +107,5 @@ class Cake
       return "red"
     end
   end
+
 end

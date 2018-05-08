@@ -11,7 +11,8 @@
     <% for baker in @bakers %>
   <tr>
     <td><a href="bakers/<%= baker.id%>"> <%=baker.name() %></a></td>
-    <td><form action="/bakers/<%=baker.id%>/delete" method="Post"><input type="submit" value=" Delete this baker"></form></td>
+    <td><form action="/bakers/<%=baker.id%>/delete" method="Post"><input type="submit" value=" Delete <%=baker.name() %>">
+    </form></td>
   </tr>
     <%end%>
 </table>

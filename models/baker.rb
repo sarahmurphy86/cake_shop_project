@@ -67,6 +67,4 @@ class Baker
     result = results.map{|baker| Baker.new(baker)}
     return result
   end
-
-
 end
