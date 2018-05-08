@@ -81,12 +81,23 @@ class Cake
   end
 
 # Method for a Stock Level
-# If quantity is less than 10 return green
-# If quantity is less than 5 return amber
-# If quantity is equal to 0 return red
+# If quantity is greater than 10 then return green
+# If quantity is less than 10 but greater than 0 then return amber
+# If quantity is equal to zero return red
   def stock_level()
     if @quantity >= "10"
       return "green"
+    elsif @quantity >= "3"
+      return "amber"
+    else @quantity
+      return "red"
     end
   end
+
+
+
+
+
+
+
 end
