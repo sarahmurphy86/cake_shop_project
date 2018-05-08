@@ -12,8 +12,8 @@ class Cake
     @name = options["name"]
     @description = options["description"]
     @quantity = options["quantity"].to_i
-    @buying_cost = options["buying_cost"]
-    @retail_price = options["retail_price"]
+    @buying_cost = options["buying_cost"].to_i
+    @retail_price = options["retail_price"].to_i
     @baker_id = options["baker_id"].to_i
   end
 

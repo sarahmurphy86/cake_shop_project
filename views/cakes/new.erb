@@ -10,6 +10,13 @@
   <label for="description"> Description:</label>
   <input type="text" name="description" id="description">
 
+  <label for="baker">Baker Name:</label>
+  <select name="baker_id">
+    <% for baker in @bakers %>
+    <option value="<%= baker.id%>"><%=baker.name %></option>
+    <%end  %>
+  </select>
+
   <label for="quantity"> Quantity:</label>
   <input type="number" name="quantity" id="quantity" min="0">
 
@@ -19,13 +26,7 @@
   <label for="retail_price"> Retail Price:</label>
   <input type="number" name="retail_price" id="retail_price" min="0">
 
-  <label for="baker">Baker Name:</label>
-  <select name="baker_id">
-    <% for baker in @bakers %>
-    <option value="<%= baker.id%>"><%=baker.name %></option>
-    <%end  %>
-  </select>
 
-  <input type="submit" value="Save Cake">
+  <input type="submit" value="Add Cake">
 
 </form>
