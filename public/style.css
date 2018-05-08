@@ -1,11 +1,58 @@
+body {
+  font-family: 'Arimo';
+  background-color:#BFD7EA;
+}
+
+h1{
+  color: #FFFFFF;
+  text-align: center;
+  background-color:#FF7577;
+}
+h2{
+  color: #0B3954;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  padding: 10px 10px 1px 10px;
+  text-align: left;
+}
+
+th {
+  padding: 20px 20px 10px 20px;
+  border: : 1px solid #FFFFFF;
+}
+
+table {
+  border: white;
+}
+
+.flex--row {
+    flex-direction: row;
+}
+
+.buying_cost{
+  text-align: center;
+}
+
+.retail_cost{
+  text-align: center;
+}
+
 .red {
   background-color: red;
+  text-align: center;
 }
 
 .amber {
   background-color: orange;
+  text-align: center;
 }
 
 .green {
   background-color: green;
+  text-align: center;
 }

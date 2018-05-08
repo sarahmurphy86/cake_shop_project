@@ -3,20 +3,30 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/images/cake_icon.png" />
     <title>Piece of Cake</title>
+    <link <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
   </head>
   <body>
-    <nav>
+    <nav class="flex flex--row">
       <ul>
         <li>
           <a href="/">Home Page</a>
+        </li>
+        <li>
           <a href="/cakes">Stock List</a>
+        </li>
+        <li>
           <a href="/cakes/new">Add Cake</a>
+        </li>
+        <li>
           <a href="/bakers">Baker List</a>
+        </li>
+        <li>
           <a href="/bakers/new">Add Baker</a>
-          </li>
-        </ul>
-      </nav>
+        </li>
+      </ul>
+    </nav>
     <%= yield  %>
   </body>
 </html>

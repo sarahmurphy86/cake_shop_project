@@ -16,8 +16,8 @@ get '/cakes/new' do
 end
 
 post '/cakes/new' do
-  cake = Cake.new params
-  cake.save()
+  @cake = Cake.new(params)
+  @cake.save()
   erb(:"cakes/success_add_cake")
 end
 

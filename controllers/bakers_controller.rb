@@ -15,8 +15,8 @@ get '/bakers/new' do
 end
 
 post '/bakers/new' do
-  baker = Baker.new params
-  baker.save()
+  @baker = Baker.new params
+  @baker.save()
   erb(:"bakers/success_add_baker")
 end
 
@@ -46,5 +46,5 @@ post '/bakers/:id/delete' do
   baker = Baker.find(params['id'])
   baker.delete()
   erb(:"bakers/success_baker_deleted")
-  
+
 end
