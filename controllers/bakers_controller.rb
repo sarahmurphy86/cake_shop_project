@@ -29,3 +29,15 @@ get '/bakers/:id/edit' do
   @baker = Baker.find(params['id'])
   erb(:"bakers/edit")
 end
+
+post '/bakers/:id' do
+  baker = Baker.new(params)
+  baker.update()
+  erb(:"bakers/success_baker_updated")
+end
+
+post '/bakers/:id/delete' do
+  baker = Baker.find(params['id'])
+  baker.delete()
+  erb(:"bakers/success_baker_deleted")
+end

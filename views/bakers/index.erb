@@ -1,14 +1,18 @@
 <h1> Baker Index</h1>
 
+<p> You can only delete a baker if they are not currently supplying your cakes</p>
+
 <table>
   <tr>
     <th scope="col">Baker Name</th>
+    <th scope="col"> Current Bakes</th>
     <th scope="col">Delete Baker</th>
   </tr>
     <% for baker in @bakers %>
   <tr>
     <td><a href="bakers/<%= baker.id%>"> <%=baker.name() %></a></td>
-    <td> Delete </td>
+    <td> </td>
+    <td> Delete</td>
   </tr>
     <%end%>
 </table>
