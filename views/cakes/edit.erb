@@ -1,5 +1,5 @@
 
-<form action="/cakes/<%=@cake.id%>" method="post">
+<form action="/cakes/<%= @cake.id%>" method="post">
 
   <label for="name"> Cake Name: </label>
   <input type="text" name="name" id="name" value="<%= @cake.name %>">
@@ -8,7 +8,7 @@
   <input type="text" name="description" id="description" value="<%= @cake.description %>">
 
   <label for="quantity"> Quantity:</label>
-  <input type="number" name="quantity" id="quantity" min="0" value="<%= @student.age %>">
+  <input type="number" name="quantity" id="quantity" min="0" value="<%= @cake.quantity %>">
 
   <label for="buying_cost"> Buying Cost:</label>
   <input type="number" name="buying_cost" id="buying_cost" min="0" value="<%= @cake.buying_cost %>">

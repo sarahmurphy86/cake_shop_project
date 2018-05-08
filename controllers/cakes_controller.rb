@@ -1,3 +1,4 @@
+require('pry')
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/cake.rb')
@@ -21,12 +22,12 @@ post '/cakes/new' do
 end
 
 get '/cakes/:id' do
-  @cakes = Cake.find(params['id'])
+  @cake = Cake.find(params['id'])
   erb(:"cakes/show")
 end
 
 get '/cakes/:id/edit' do
-  @cakes = Cake.find(params['id'])
+  @cake = Cake.find(params['id'])
   @bakers = Baker.read_all()
   erb(:"cakes/edit")
 end

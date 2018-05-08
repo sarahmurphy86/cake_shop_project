@@ -1,8 +1,12 @@
-<h2><%= @cakes.name()%></h2>
+<h2><%= @cake.name()%></h2>
 
-<p>Description: <%= @cakes.description() %></p>
-<p>Quantity: <%= @cakes.quantity() %></p>
-<p>Buying Cost: <%= @cakes.buying_cost() %></p>
-<p>Retail Price: <%= @cakes.retail_price() %></p>
-<p>Buying Cost: <%= @cakes.buying_cost() %></p>
-<p>Baker Name: <%= @cakes.get_baker.name() %></p>
+<p>Description: <%= @cake.description() %></p>
+<p>Quantity: <%= @cake.quantity() %></p>
+<p>Buying Cost: <%= @cake.buying_cost() %></p>
+<p>Retail Price: <%= @cake.retail_price() %></p>
+<p>Buying Cost: <%= @cake.buying_cost() %></p>
+<p>Baker Name: <%= @cake.get_baker.name() %></p>
+
+<p><a href="/cakes/<%=@cake.id%>/edit">Edit this cake</a></p>
+
+<p>Delete this cake</p>
