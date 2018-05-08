@@ -1,0 +1,5 @@
+<h2><%= @baker.name()%></h2>
+
+<p><a href="/bakers/<%=@baker.id%>/edit">Edit this baker</a></p>
+
+<form action="/bakers/<%=@baker.id%>/delete" method="POST"><input type="submit" value="Delete this baker"></form>

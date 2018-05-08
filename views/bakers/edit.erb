@@ -1,0 +1,7 @@
+<form action="/bakers/<%= @baker.id%>" method="post">
+
+  <label for="name"> Baker Name: </label>
+  <input type="text" name="name" id="name" value="<%= @baker.name %>">
+
+  <input type="submit" value="Save Changes">
+</form>
