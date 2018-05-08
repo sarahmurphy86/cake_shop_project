@@ -55,6 +55,13 @@ class Cake
     SqlRunner.run(sql, values)
   end
 
+# DELETE METHOD - Instance
+  def delete()
+    sql = "DELETE FROM cakes WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql,values)
+  end
+
 # DELETE METHOD - Class
   def self.delete_all()
     sql = "DELETE FROM cakes"

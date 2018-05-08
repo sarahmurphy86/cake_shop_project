@@ -37,3 +37,9 @@ post '/cakes/:id' do
   cake.update()
   erb(:"cakes/success_cake_updated")
 end
+
+post '/cakes/:id/delete' do
+  cake = Cake.find(params['id'])
+  cake.delete()
+  erb(:"cakes/success_cake_deleted")
+end

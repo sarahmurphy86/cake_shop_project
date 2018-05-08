@@ -9,4 +9,4 @@
 
 <p><a href="/cakes/<%=@cake.id%>/edit">Edit this cake</a></p>
 
-<p>Delete this cake</p>
+<form action="/cakes/<%=@cake.id%>/delete" method="POST"><input type="submit" value="Delete this cake"></form>
