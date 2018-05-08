@@ -1,0 +1,29 @@
+
+<form action="/cakes/<%=@cake.id%>" method="post">
+
+  <label for="name"> Cake Name: </label>
+  <input type="text" name="name" id="name" value="<%= @cake.name %>">
+
+  <label for="description"> Description:</label>
+  <input type="text" name="description" id="description" value="<%= @cake.description %>">
+
+  <label for="quantity"> Quantity:</label>
+  <input type="number" name="quantity" id="quantity" min="0" value="<%= @student.age %>">
+
+  <label for="buying_cost"> Buying Cost:</label>
+  <input type="number" name="buying_cost" id="buying_cost" min="0" value="<%= @cake.buying_cost %>">
+
+  <label for="retail_price"> Retail Price:</label>
+  <input type="number" name="retail_price" id="retail_price" min="0" value="<%= @cake.retail_price %>">
+
+  <label for="baker">Baker Name:</label>
+  <select name="baker_id">
+    <% for baker in @bakers %>
+    <option value="<%= baker.id%>"><%=baker.name %></option>
+    <%end  %>
+
+  </select>
+
+  <input type="submit" value="Save Cake">
+
+</form>

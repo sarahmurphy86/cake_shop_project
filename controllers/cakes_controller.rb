@@ -17,10 +17,22 @@ end
 post '/cakes/new' do
   cake = Cake.new params
   cake.save()
-  erb(:"cakes/success")
+  erb(:"cakes/success_add_cake")
 end
 
 get '/cakes/:id' do
   @cakes = Cake.find(params['id'])
   erb(:"cakes/show")
+end
+
+get '/cakes/:id/edit' do
+  @cakes = Cake.find(params['id'])
+  @bakers = Baker.read_all()
+  erb(:"cakes/edit")
+end
+
+post '/cakes/:id' do
+  cake = Cake.new(params)
+  cake.update()
+  erb(:"cakes/success_cake_updated")
 end
