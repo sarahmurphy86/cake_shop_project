@@ -18,7 +18,7 @@
 		<td><%=cake.buying_cost() %></td>
 		<td><%=cake.retail_price() %></td>
 		<td><%=cake.quantity() %></td>
-		<td></td>
+		<td class="<%=cake.stock_level()%>"><%=cake.stock_level()%></td>
 	</tr>
   <% end %>
 </table>

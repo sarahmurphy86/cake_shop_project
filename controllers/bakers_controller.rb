@@ -37,6 +37,9 @@ post '/bakers/:id' do
 end
 
 post '/bakers/:id/delete' do
+  #if baker has any cakes
+  # redirect to a new page saying sorry
+  #else
   baker = Baker.find(params['id'])
   baker.delete()
   erb(:"bakers/success_baker_deleted")
