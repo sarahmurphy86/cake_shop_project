@@ -1,4 +1,6 @@
 require_relative "../db/sql_runner"
+require_relative "cake.rb"
+require('pry-byebug')
 
 class Baker
 
@@ -32,6 +34,12 @@ class Baker
     SqlRunner.run(sql,values)
   end
 
+# Return cake METHOD - do i need this? Delete?
+# def get_cake
+#   cake = Cake.find(@cake_id)
+#   return cake
+# end
+
 # READ METHOD - Class
   def self.read_all()
     sql = "SELECT * FROM bakers"
@@ -59,5 +67,6 @@ class Baker
     result = results.map{|baker| Baker.new(baker)}
     return result
   end
+
 
 end

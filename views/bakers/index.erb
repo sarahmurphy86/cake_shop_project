@@ -5,14 +5,12 @@
 <table>
   <tr>
     <th scope="col">Baker Name</th>
-    <th scope="col"> Current Bakes</th>
     <th scope="col">Delete Baker</th>
   </tr>
     <% for baker in @bakers %>
   <tr>
     <td><a href="bakers/<%= baker.id%>"> <%=baker.name() %></a></td>
-    <td> </td>
-    <td></td>
+    <td><form action="/bakers/<%=baker.id%>/delete" method="Post"><input type="submit" value=" Delete this baker"></form></td>
   </tr>
     <%end%>
 </table>

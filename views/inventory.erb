@@ -1,6 +1,7 @@
-<h1>Stock Inventory</h1>
-
+<h1>Piece of Cake</h1>
 <table>
+	<caption><h2>Cake shop inventory</h2> </caption>
+	<thead>
 	<tr>
 		<th scope="col">Name</th>
 		<th scope="col">Description</th>
@@ -19,7 +20,7 @@
 		<td><%=cake.buying_cost() %></td>
 		<td><%=cake.retail_price() %></td>
 		<td class="<%=cake.stock_level()%>"><%=cake.quantity() %></td>
-	
+
 
 	</tr>
   <% end %>
