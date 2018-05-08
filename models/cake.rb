@@ -17,7 +17,7 @@ class Cake
     @baker_id = options["baker_id"].to_i
   end
 
-# CREATE METHOD - Individual
+# CREATE METHOD - Instance
   def save()
     sql = "INSERT INTO cakes
     (name, description, quantity, buying_cost, retail_price, baker_id)
@@ -26,6 +26,24 @@ class Cake
     values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
+  end
+
+# UPDATE METHOD - Instance
+  def update()
+    sql = "UPDATE cakes SET
+    (name, description, quantity, buying_cost, retail_price, baker_id)
+    =
+    ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @id]
+    SqlRunner.run(sql, values)
+    end
+
+# DELETE METHOD - Instance
+  def delete()
+    sql = "DELETE FROM cakes WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql,values)
   end
 
 # READ METHOD - Class
@@ -42,24 +60,6 @@ class Cake
     result = SqlRunner.run(sql ,values)[0]
     cake = Cake.new(result)
     return cake
-  end
-
-# UPDATE METHOD - Individual
-  def update()
-    sql = "UPDATE cakes SET
-    (name, description, quantity, buying_cost, retail_price, baker_id)
-    =
-    ($1, $2, $3, $4, $5, $6)
-    WHERE id = $7"
-    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @id]
-    SqlRunner.run(sql, values)
-  end
-
-# DELETE METHOD - Instance
-  def delete()
-    sql = "DELETE FROM cakes WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql,values)
   end
 
 # DELETE METHOD - Class
