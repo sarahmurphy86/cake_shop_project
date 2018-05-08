@@ -8,7 +8,7 @@
 		<th scope="col">Buying Cost</th>
 		<th scope="col">Retail Price</th>
 		<th scope="col">Quantity</th>
-    <th scope="col">Stock Level</th>
+  
   </tr>
   <% for cake in @cakes %>
   <tr>
@@ -17,8 +17,8 @@
 		<td><%=cake.get_baker.name() %></td>
 		<td><%=cake.buying_cost() %></td>
 		<td><%=cake.retail_price() %></td>
-		<td><%=cake.quantity() %></td>
-		<td><%=cake.stock_level()%></td>
+		<td class="<%=cake.stock_level()%>"><%=cake.quantity() %></td>
+
 	</tr>
   <% end %>
 </table>

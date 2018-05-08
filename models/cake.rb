@@ -11,7 +11,7 @@ class Cake
     @id = options["id"].to_i if options["id"]
     @name = options["name"]
     @description = options["description"]
-    @quantity = options["quantity"]
+    @quantity = options["quantity"].to_i
     @buying_cost = options["buying_cost"]
     @retail_price = options["retail_price"]
     @baker_id = options["baker_id"].to_i
@@ -81,23 +81,30 @@ class Cake
   end
 
 # Method for a Stock Level
-# If quantity is greater than 10 then return green
-# If quantity is less than 10 but greater than 0 then return amber
-# If quantity is equal to zero return red
+# If quantity is greater or equal to 6 then return green
+# If quantity is equal to 5 return amber
+# Otherwise return red
+  # def stock_level()
+  #   if @quantity >= "6"
+  #     return "green"
+  #   elsif @quantity == "5"
+  #     return "amber"
+  #   else @quantity
+  #     return "red"
+  #   end
+  # end
+
+  # Method for Stock Level
   def stock_level()
-    if @quantity >= "10"
+  # If quantity is greater than 8 return green
+  # If quantity is greater than 3 and quantity is less than or equal to 7 return amber
+  # Otherwise return red
+    if @quantity >= 8
       return "green"
-    elsif @quantity >= "3"
+    elsif @quantity >=3 && @quantity <=7
       return "amber"
-    else @quantity
+    else
       return "red"
     end
   end
-
-
-
-
-
-
-
 end
