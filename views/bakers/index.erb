@@ -1,0 +1,14 @@
+<h1> Baker Index</h1>
+
+<table>
+  <tr>
+    <th scope="col">Baker Name</th>
+    <th scope="col">Delete Baker</th>
+  </tr>
+    <% for baker in @bakers %>
+  <tr>
+    <td><a href="bakers/<%= baker.id%>"> <%=baker.name() %></a></td>
+    <td> Delete </td>
+  </tr>
+    <%end%>
+</table>
