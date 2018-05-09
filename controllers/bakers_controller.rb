@@ -15,7 +15,7 @@ get '/bakers/new' do
 end
 
 post '/bakers/new' do
-  @baker = Baker.new params
+  @baker = Baker.new(params)
   @baker.save()
   erb(:"bakers/success_add_baker")
 end
