@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS cakes;
 DROP TABLE IF EXISTS bakers;
--- DROP TABLE IF EXISTS cake_types;
+DROP TABLE IF EXISTS cake_types;
 
 CREATE TABLE cake_types (
   id SERIAL4 PRIMARY KEY,
-  name VARCHAR(255)not NULL
+  type VARCHAR(255)not NULL
 );
 
 CREATE TABLE bakers (

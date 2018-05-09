@@ -6,7 +6,7 @@ require('pry-byebug')
 class Cake
 
   attr_reader :id
-  attr_accessor :name, :description, :quantity, :buying_cost, :retail_price, :baker_id
+  attr_accessor :name, :description, :quantity, :buying_cost, :retail_price, :baker_id, :cake_type_id
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
@@ -16,15 +16,16 @@ class Cake
     @buying_cost = options["buying_cost"].to_i
     @retail_price = options["retail_price"].to_i
     @baker_id = options["baker_id"].to_i
+    @cake_type_id = options["cake_type_id"].to_i
   end
 
 # CREATE METHOD - Instance
   def save()
     sql = "INSERT INTO cakes
-    (name, description, quantity, buying_cost, retail_price, baker_id)
-    VALUES ($1, $2, $3, $4, $5, $6)
+    (name, description, quantity, buying_cost, retail_price, baker_id, cake_type_id)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
     RETURNING id"
-    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id]
+    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @cake_type_id]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
   end

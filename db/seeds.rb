@@ -56,11 +56,8 @@ cake2 = Cake.new ({
   "buying_cost" => "8",
   "retail_price" => "10",
   "baker_id" => baker2.id,
-  "cake_type_id" =>cake_type3.id
+  "cake_type_id" => cake_type3.id
   })
 
   cake1.save()
   cake2.save()
-
-binding.pry
-nil
