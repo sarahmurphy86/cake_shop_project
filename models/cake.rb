@@ -1,5 +1,6 @@
 require_relative "../db/sql_runner"
 require_relative "baker.rb"
+require_relative "cake_type.rb"
 require('pry-byebug')
 
 class Cake
