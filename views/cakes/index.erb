@@ -4,5 +4,6 @@
 <% @cakes.each do |cake| %>
   <p>Name: <%= cake.name() %></p>
   <p>Description: <%=cake.description() %></p>
+  <p>Cake Type: <%= cake.get_type.type() %></p>
   <hr />
 <% end %>

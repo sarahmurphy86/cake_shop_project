@@ -7,6 +7,7 @@ require_relative('../models/baker.rb')
 
 get '/cakes' do
   @cakes = Cake.read_all()
+  @cake_types = Cake_type.read_all()
   erb(:"cakes/index")
 end
 
