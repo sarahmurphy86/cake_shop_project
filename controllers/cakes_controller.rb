@@ -14,6 +14,7 @@ end
 get '/cakes/new' do
   @cakes = Cake.read_all()
   @bakers = Baker.read_all()
+  @cake_types = Cake_type.read_all()
   erb(:"cakes/new")
 end
 
@@ -31,6 +32,7 @@ end
 get '/cakes/:id/edit' do
   @cake = Cake.find(params['id'])
   @bakers = Baker.read_all()
+  @cake_types = Cake_type.read_all()
   erb(:"cakes/edit")
 end
 

@@ -3,11 +3,11 @@
 <h2><%= @cake.name()%> </h2>
 
 <p>Description: <%= @cake.description() %></p>
-<p>Quantity: <%= @cake.quantity() %></p>
+<p>Baker Name: <%= @cake.get_baker.name() %></p>
+<p>Cake Type: <%= @cake.get_type.type()  %></p>
 <p>Buying Cost: <%= @cake.buying_cost() %></p>
 <p>Retail Price: <%= @cake.retail_price() %></p>
-<p>Buying Cost: <%= @cake.buying_cost() %></p>
-<p>Baker Name: <%= @cake.get_baker.name() %></p>
+<p>Quantity: <%= @cake.quantity() %> </p>
 
 <p><a href="/cakes/<%=@cake.id%>/edit">Edit <%=  @cake.name()%></a></p>
 
