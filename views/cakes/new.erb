@@ -11,14 +11,15 @@
   <input type="text" name="description" id="description">
 
   <label for="baker">Baker Name:</label>
-  <select name="baker_id">
+  <select name="baker_id" id="baker">
     <% for baker in @bakers %>
     <option value="<%= baker.id%>"><%=baker.name %></option>
     <%end  %>
   </select>
 
+
   <label for="cake_type">Cake Type:</label>
-  <select name="cake_type_id">
+  <select name="cake_type_id" id="cake_type">
     <% for cake_type in @cake_types %>
     <option value="<%= cake_type.id%>"><%=cake_type.type %></option>
     <%end  %>

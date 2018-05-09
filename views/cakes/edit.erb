@@ -8,16 +8,25 @@
   <input type="text" name="description" id="description" value="<%= @cake.description %>">
 
   <label for="baker">Baker Name:</label>
-  <select name="baker_id">
+  <select name="baker_id" id="baker" selected="<%= @cake.baker_id %>" >
     <% for baker in @bakers %>
-    <option value="<%= baker.id%>"><%=baker.name %></option>
+      <% if baker.id == @cake.baker_id %>
+        <option value=<%= baker.id %> selected><%=baker.name %></option>
+      <%else  %>
+        <option value=<%= baker.id%>><%=baker.name%></option>
+        <%end  %>
     <%end  %>
   </select>
 
   <label for="cake_type">Cake Type:</label>
-  <select name="cake_type_id">
+  <select name="cake_type_id" id="cake_type" selected="<%= @cake.cake_type_id %>" >
     <% for cake_type in @cake_types %>
-    <option value="<%= cake_type.id%>"><%=cake_type.type %></option>
+      <% if cake_type.id == @cake.cake_type_id %>
+        <option value=<%= cake_type.id%>
+        selected><%=cake_type.type %></option>
+      <% else  %>
+        <option value=<%= cake_type.id%>><%=cake_type.type%></option>
+      <%end  %>
     <%end  %>
   </select>
 
