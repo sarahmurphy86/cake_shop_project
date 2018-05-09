@@ -18,4 +18,32 @@ class Cake_type
     @id = result[0]["id"].to_i
   end
 
+# READ METHOD - Class
+  def self.read_all()
+    sql = "SELECT * FROM cake_types"
+    result = SqlRunner.run(sql)
+    build_results(result)
+  end
+
+# DELETE METHOD - Class
+  def self.delete_all()
+    sql = "DELETE FROM cake_types"
+    SqlRunner.run(sql)
+  end
+
+# FIND METHOD - Class
+  def self.find(id)
+    sql = "SELECT * FROM cake_types WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values)[0]
+    cake_type = Cake_type.new(result)
+    return cake_type
+  end
+
+# MAP METHOD - To use in READ Method
+  def self.build_results(results)
+    result = results.map{|cake_type| Cake_type.new(cake_type)}
+    return result
+  end
+
 end

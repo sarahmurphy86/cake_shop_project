@@ -5,6 +5,7 @@ require_relative "../models/cake_type.rb"
 require( 'pry-byebug' )
 
 Cake.delete_all()
+Cake_type.delete_all()
 Baker.delete_all()
 
 baker1 = Baker.new ({
@@ -61,3 +62,5 @@ cake2 = Cake.new ({
 
   cake1.save()
   cake2.save()
+binding.pry
+nil

@@ -33,11 +33,11 @@ class Cake
 # UPDATE METHOD - Instance
   def update()
     sql = "UPDATE cakes SET
-    (name, description, quantity, buying_cost, retail_price, baker_id)
+    (name, description, quantity, buying_cost, retail_price, baker_id, cake_type_id)
     =
-    ($1, $2, $3, $4, $5, $6)
-    WHERE id = $7"
-    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @id]
+    ($1, $2, $3, $4, $5, $6, $7)
+    WHERE id = $8"
+    values = [@name, @description, @quantity, @buying_cost, @retail_price, @baker_id, @cake_type_id, @id]
     SqlRunner.run(sql, values)
     end
 
