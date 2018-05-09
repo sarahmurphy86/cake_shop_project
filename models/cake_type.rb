@@ -40,7 +40,7 @@ class Cake_type
     return cake_type
   end
 
-# MAP METHOD - To use in READ Method
+# MAP METHOD- Class - To use in READ Method
   def self.build_results(results)
     result = results.map{|cake_type| Cake_type.new(cake_type)}
     return result

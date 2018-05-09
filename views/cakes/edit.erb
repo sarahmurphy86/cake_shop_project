@@ -3,10 +3,12 @@
 
   <label for="name"> Cake Name: </label>
   <input type="text" name="name" id="name" value="<%= @cake.name %>">
-
+<br>
+<br>
   <label for="description"> Description:</label>
   <input type="text" name="description" id="description" value="<%= @cake.description %>">
-
+<br>
+<br>
   <label for="baker">Baker Name:</label>
   <select name="baker_id" id="baker" selected="<%= @cake.baker_id %>" >
     <% for baker in @bakers %>
@@ -17,7 +19,8 @@
         <%end  %>
     <%end  %>
   </select>
-
+<br>
+<br>
   <label for="cake_type">Cake Type:</label>
   <select name="cake_type_id" id="cake_type" selected="<%= @cake.cake_type_id %>" >
     <% for cake_type in @cake_types %>
@@ -29,16 +32,20 @@
       <%end  %>
     <%end  %>
   </select>
-
+<br>
+<br>
   <label for="buying_cost"> Buying Cost:</label>
   <input type="number" name="buying_cost" id="buying_cost" min="0" value="<%= @cake.buying_cost %>">
-
+<br>
+<br>
   <label for="retail_price"> Retail Price:</label>
   <input type="number" name="retail_price" id="retail_price" min="0" value="<%= @cake.retail_price %>">
-
+<br>
+<br>
   <label for="quantity"> Quantity:</label>
   <input type="number" name="quantity" id="quantity" min="0" value="<%= @cake.quantity %>">
-
+<br>
+<br>
   <input type="submit" value="Save Changes">
 
 </form>

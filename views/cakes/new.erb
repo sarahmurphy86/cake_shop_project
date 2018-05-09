@@ -5,35 +5,40 @@
 
   <label for="name"> Cake Name: </label>
   <input type="text" name="name" id="name" required="true">
-
+<br>
+<br>
   <label for="description"> Description:</label>
   <input type="text" name="description" id="description">
-
+<br>
+<br>
   <label for="baker">Baker Name:</label>
   <select name="baker_id" id="baker">
     <% for baker in @bakers %>
     <option value="<%= baker.id%>"><%=baker.name %></option>
     <%end  %>
   </select>
-
-
+<br>
+<br>
   <label for="cake_type">Cake Type:</label>
   <select name="cake_type_id" id="cake_type">
     <% for cake_type in @cake_types %>
     <option value="<%= cake_type.id%>"><%=cake_type.type %></option>
     <%end  %>
   </select>
-
-
+<br>
+<br>
   <label for="buying_cost"> Buying Cost:</label>
   <input type="number" name="buying_cost" id="buying_cost" min="0">
-
+<br>
+<br>
   <label for="retail_price"> Retail Price:</label>
   <input type="number" name="retail_price" id="retail_price" min="0">
-
+<br>
+<br>
   <label for="quantity"> Quantity:</label>
   <input type="number" name="quantity" id="quantity" min="0">
-
+<br>
+<br>
   <input type="submit" value="Add Cake">
 
 </form>

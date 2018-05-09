@@ -62,7 +62,7 @@ class Baker
     SqlRunner.run(sql)
   end
 
-# MAP METHOD - To use in READ and UPDATE Method
+# MAP METHOD -Class - To use in READ and UPDATE Method
   def self.build_results(results)
     result = results.map{|baker| Baker.new(baker)}
     return result

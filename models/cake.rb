@@ -70,7 +70,7 @@ class Cake
     SqlRunner.run(sql)
   end
 
-# MAP METHOD - To use in READ and UPDATE Method
+# MAP METHOD - Class- To use in READ and UPDATE Method
   def self.build_results(results)
     result = results.map{|cake| Cake.new(cake)}
     return result
@@ -101,7 +101,7 @@ class Cake
   #   end
   # end
 
-  # Method for Stock Level
+  # Method for Stock Level 2
   def stock_level()
   # If quantity is greater than 8 return green
   # If quantity is greater than 3 and quantity is less than or equal to 7 return amber
