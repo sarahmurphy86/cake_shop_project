@@ -7,8 +7,19 @@
   <label for="description"> Description:</label>
   <input type="text" name="description" id="description" value="<%= @cake.description %>">
 
-  <label for="quantity"> Quantity:</label>
-  <input type="number" name="quantity" id="quantity" min="0" value="<%= @cake.quantity %>">
+  <label for="baker">Baker Name:</label>
+  <select name="baker_id">
+    <% for baker in @bakers %>
+    <option value="<%= baker.id%>"><%=baker.name %></option>
+    <%end  %>
+  </select>
+
+  <label for="cake_type">Cake Type:</label>
+  <select name="cake_type_id">
+    <% for cake_type in @cake_types %>
+    <option value="<%= cake_type.id%>"><%=cake_type.type %></option>
+    <%end  %>
+  </select>
 
   <label for="buying_cost"> Buying Cost:</label>
   <input type="number" name="buying_cost" id="buying_cost" min="0" value="<%= @cake.buying_cost %>">
@@ -16,13 +27,8 @@
   <label for="retail_price"> Retail Price:</label>
   <input type="number" name="retail_price" id="retail_price" min="0" value="<%= @cake.retail_price %>">
 
-  <label for="baker">Baker Name:</label>
-  <select name="baker_id">
-    <% for baker in @bakers %>
-    <option value="<%= baker.id%>"><%=baker.name %></option>
-    <%end  %>
-
-  </select>
+  <label for="quantity"> Quantity:</label>
+  <input type="number" name="quantity" id="quantity" min="0" value="<%= @cake.quantity %>">
 
   <input type="submit" value="Save Cake">
 
