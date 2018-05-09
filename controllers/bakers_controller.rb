@@ -37,10 +37,10 @@ post '/bakers/:id' do
 end
 
 post '/bakers/:id/delete' do
-  #if baker has any cakes
+  # if baker has any cakes
   # redirect to a new page saying sorry
-  #else
-  # if Baker.get_cake
+  # else
+  # if Baker.get_cake == true
   #   erb(:"bakers/sorry_baker_has_cakes")
   # else
   baker = Baker.find(params['id'])

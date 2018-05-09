@@ -12,29 +12,21 @@ h2{
   color: #0B3954;
 }
 
-th {
-  text-align: center;
+nav{
+  color:#0B3954;
 }
 
-td {
-  padding: 10px 10px 1px 10px;
-  text-align: left;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-th {
-  padding: 20px 20px 10px 20px;
+li {
+    display: inline;
+    padding: 10px;
 }
 
-
-table, td, th {
-    border-collapse: collapse;
-    border:2px solid #FFFFFF;
-}
-
-
-.flex--row {
-    flex-direction: row;
-}
 
 .buying_cost{
   text-align: center;
