@@ -1,4 +1,4 @@
-<h1>Piece of Cake</h1>
+
 <table>
 	<caption><h2>Cake shop inventory</h2> </caption>
 	<thead>
@@ -10,6 +10,7 @@
 		<th scope="col">Buying Cost</th>
 		<th scope="col">Retail Price</th>
 		<th scope="col">Quantity</th>
+		<th scope="col">Markup</th>
 
 
   </tr>
@@ -22,6 +23,7 @@
 		<td class="buying_cost"><%=cake.buying_cost() %></td>
 		<td class="retail_cost"><%=cake.retail_price() %></td>
 		<td class="<%=cake.stock_level()%>"><%=cake.quantity() %></td>
+		<td class="mark_up"><%=cake.mark_up() %></td>
 
 
 	</tr>

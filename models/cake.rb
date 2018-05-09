@@ -115,4 +115,10 @@ class Cake
     end
   end
 
+# Method for returning mark-up
+  def mark_up()
+    return @retail_price-@buying_cost
+  end
+
+
 end
