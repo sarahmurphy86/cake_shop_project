@@ -6,6 +6,7 @@
 		<th scope="col">Name</th>
 		<th scope="col">Description</th>
 		<th scope="col">Baker</th>
+		<th scope="col">Cake Type</th>
 		<th scope="col">Buying Cost</th>
 		<th scope="col">Retail Price</th>
 		<th scope="col">Quantity</th>
@@ -17,6 +18,7 @@
 		<td><a href="/cakes/<%= cake.id%>"> <%=cake.name() %></a></td>
 		<td><%=cake.description() %></td>
 		<td><%=cake.get_baker.name() %></td>
+		<td><%=cake.get_type.type() %></td>
 		<td class="buying_cost" ><%=cake.buying_cost() %></td>
 		<td class="retail_cost"><%=cake.retail_price() %></td>
 		<td class="<%=cake.stock_level()%>"><%=cake.quantity() %></td>

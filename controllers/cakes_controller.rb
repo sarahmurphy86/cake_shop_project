@@ -2,6 +2,7 @@ require('pry')
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/cake.rb')
+require_relative('../models/cake_type.rb')
 require_relative('../models/baker.rb')
 
 get '/cakes' do

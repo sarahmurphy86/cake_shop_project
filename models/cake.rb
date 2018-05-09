@@ -82,6 +82,11 @@ class Cake
     return baker
   end
 
+  def get_type()
+    type = Cake_type.find(@cake_type_id)
+    return type
+  end
+
 # Method for a Stock Level
 # If quantity is greater or equal to 6 then return green
 # If quantity is equal to 5 return amber
