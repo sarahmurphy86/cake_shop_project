@@ -34,11 +34,13 @@ class Baker
     SqlRunner.run(sql,values)
   end
 
-# Return cake METHOD - do i need this? Delete?
-# def get_cake
-#   cake = Cake.find(@cake_id)
-#   return cake
-# end
+# Return cakes the baker has
+def cakes
+  sql = "SELECT * FROM cakes WHERE baker_id = $1"
+  values = [@id]
+  result = SqlRunner.run(sql, values)
+  return Cake.build_results(result)
+end
 
 # READ METHOD - Class
   def self.read_all()
@@ -48,9 +50,9 @@ class Baker
   end
 
 # FIND METHOD - Class
-  def self.find(id)
+  def self.find(id_to_find)
     sql = "SELECT * FROM bakers WHERE id = $1"
-    values = [id]
+    values = [id_to_find]
     result = SqlRunner.run(sql ,values)[0]
     baker = Baker.new(result)
     return baker

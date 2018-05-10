@@ -20,10 +20,10 @@
 		<td><%=cake.description() %></td>
 		<td><%=cake.get_baker.name() %></td>
 		<td><%=cake.get_type.type() %></td>
-		<td class="buying_cost"><%=cake.buying_cost() %></td>
-		<td class="buying_cost"><%=cake.retail_price() %></td>
+		<td class="buying_cost">£<%=cake.buying_cost() %></td>
+		<td class="buying_cost">£<%=cake.retail_price() %></td>
 		<td class="<%=cake.stock_level()%>"><%=cake.quantity() %></td>
-		<td class="mark_up"><%=cake.mark_up() %></td>
+		<td class="mark_up">£<%=cake.mark_up() %></td>
 
 
 	</tr>
