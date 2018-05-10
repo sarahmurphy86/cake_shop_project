@@ -8,37 +8,37 @@ h2{
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FF7577;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF7577;
 }
 
 li {
-    float: right;
+  float: right;
 }
 
 li a {
-    display: block;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 14px 16px;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
 }
 
 li a:hover {
-    background-color: #0B3954;
+  background-color: #0B3954;
 }
 
-.buying_cost{
+.buying_cost {
   text-align: center;
 }
 
-.retail_cost{
+.retail {
   text-align: center;
 }
 
-.mark_up{
+.mark_up {
   text-align: center;
 }
 
