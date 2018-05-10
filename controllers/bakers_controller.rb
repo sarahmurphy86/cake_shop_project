@@ -44,9 +44,7 @@ post '/bakers/:id/delete' do
   if baker.cakes().length != 0
     erb(:"bakers/sorry_baker_has_cakes")
   else
-  baker.delete()
-  erb(:"bakers/success_baker_deleted")
+    baker.delete()
+    erb(:"bakers/success_baker_deleted")
+  end
 end
-end
-
-# end
