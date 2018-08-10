@@ -1,10 +1,6 @@
-# cake_shop_project
-week_05_project_week
 
+### Installing:
 
-dbname: "cake_shop"
-
-### Installing
  Created database
  ```
 In Terminal: dropdb cake_shop  then createdb cake_shop
@@ -13,7 +9,6 @@ In Terminal: dropdb cake_shop  then createdb cake_shop
  ```
 In Terminal:  psql -d cake_shop -f db/cake_shop.sql
 ```
-
  Seed the database:
  ```
 In terminal: ruby db/seeds.rb 
