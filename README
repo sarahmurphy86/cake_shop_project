@@ -2,7 +2,7 @@
 ### Installing:
 
  Created database
- ```
+```
 In Terminal: dropdb cake_shop  then createdb cake_shop
 ```
   Execute PostgreSQL scripts.
